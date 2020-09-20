@@ -29,6 +29,11 @@ public:
     friend std::ostream& print(std::ostream&, const QueryResult&);    // 通过一个输出流来打印查询结果
 public:
     QueryResult(const std::string& s, std::shared_ptr<std::set<TextQuery::LineNo>> set, std::shared_ptr<std::vector<std::string>> v) : word(s), nos(set), input(v) { }
+
+    std::set<TextQuery::LineNo>::iterator begin() { return nos->begin(); }
+    std::set<TextQuery::LineNo>::iterator end() { return nos->end(); }
+    std::shared_ptr<std::vector<std::string>> get_file() { return input; }
+
 private:
     std::string word;  // 查询的单词
     std::shared_ptr<std::set<TextQuery::LineNo>> nos;   // 通过set保存单词所在行号

@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="TextQuery.cpp" />
     <ClCompile Include="文本查找系统3.cpp" />
+    <ClCompile Include="Query.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Query.h" />
